@@ -47,4 +47,9 @@ server.post("/api/login", (req, res) => {
   }
 });
 
+server.get("*", (req, res) => {
+  res.send(`
+    <h2>Welcome to my deployed app</h2>`);
+});
+
 module.exports = server;
